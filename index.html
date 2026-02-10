@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hawthorne Court</title>
+  <meta name="description" content="Hawthorne Court is a historic cooperative in Jackson Heights, Queens, NYC. Built in 1922, it comprises fourteen Neo-Georgian buildings surrounding a beautifully landscaped garden.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container">
+      <a href="index.html" class="nav__logo">Hawthorne Court</a>
+      <button class="nav__toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links">
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <img src="images/centerCircle.png" alt="Hawthorne Court emblem" class="hero__icon">
+      <h1>Hawthorne Court</h1>
+      <p>Located in the Jackson Heights neighborhood of Queens, New York City. Seven buildings along 76th Street and seven along 77th Street, between 35th Avenue and 37th Avenue.</p>
+      <a href="#about" class="btn">Take a Tour</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section section--alt">
+    <div class="container">
+      <div class="content-block">
+        <h2>Hawthorne Court</h2>
+        <p>Built as a cooperative in 1922, Hawthorne Court was designed by architect George H. Wells for the Queensboro Corporation. Located on 76th and 77th Streets between 37th and 35th Avenues, Hawthorne Court is comprised of fourteen five-story Neo-Georgian buildings that surround a beautifully landscaped interior garden.</p>
+        <p>Each street-front has four buildings with identical five-room apartments and three buildings with identical six-room apartments. The five-room apartments are approximately 1,100 square feet and the six-room apartments are approximately 1,300 square feet. Each apartment has three exposures, a fireplace, and a sunroom.</p>
+        <p>The sunroom projects into the garden with three sets of double windows, its own full bath, and can be used as an extension of the living area or as a bedroom. The buildings are elevated. Hawthorne Court is a designated landmark located within the Jackson Heights Historic District, and is also listed on the State and National Register of Historic Places.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pullquote -->
+  <section class="section">
+    <div class="pullquote">
+      <p>The award-winning Hawthorne Court gardens provide an escape from the hustle and bustle of city life.</p>
+    </div>
+  </section>
+
+  <!-- Photo Grid -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="photo-grid">
+        <div class="photo-grid__item">
+          <a href="https://www.instagram.com/p/CrVwsHjuPP1/" target="_blank" rel="noopener">
+            <img src="images/garden-spring.jpg" alt="Hawthorne Court looking exceptionally beautiful this season">
+          </a>
+        </div>
+        <div class="photo-grid__item">
+          <a href="https://www.instagram.com/p/CnKXgnluwPP/" target="_blank" rel="noopener">
+            <img src="images/hawk.jpg" alt="Juvenile red tailed hawk visited and surveyed the garden">
+          </a>
+        </div>
+        <div class="photo-grid__item">
+          <a href="https://www.instagram.com/p/CkXHHhauu1H/" target="_blank" rel="noopener">
+            <img src="images/aster.jpg" alt="Aster in full bloom in the garden">
+          </a>
+        </div>
+        <div class="photo-grid__item">
+          <a href="https://www.instagram.com/p/CkXFuAauS6s/" target="_blank" rel="noopener">
+            <img src="images/halloween.jpg" alt="Celebrating Halloween in Hawthorne Court">
+          </a>
+        </div>
+        <div class="photo-grid__item">
+          <a href="https://www.instagram.com/p/CkBUSdQOTqh/" target="_blank" rel="noopener">
+            <img src="images/fall-colors.jpg" alt="Fall colors in the garden">
+          </a>
+        </div>
+        <div class="photo-grid__item">
+          <a href="https://www.instagram.com/p/CgS1qpPOy-_/" target="_blank" rel="noopener">
+            <img src="images/growing-up.jpg" alt="Growing up together in Hawthorne Court">
+          </a>
+        </div>
+        <div class="photo-grid__item">
+          <a href="https://www.instagram.com/p/Cfjnm_ruZq-/" target="_blank" rel="noopener">
+            <img src="images/centennial.jpg" alt="Preparing the garden for the 100 year celebration">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Hawthorne Court &middot; Jackson Heights, Queens, NYC</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const toggle = document.querySelector('.nav__toggle');
+    const links = document.querySelector('.nav__links');
+    toggle.addEventListener('click', () => {
+      links.classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>

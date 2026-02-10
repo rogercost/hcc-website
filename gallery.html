@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery — Hawthorne Court</title>
+  <meta name="description" content="Photos of Hawthorne Court's gardens, buildings, and community life.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container">
+      <a href="index.html" class="nav__logo">Hawthorne Court</a>
+      <button class="nav__toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links">
+        <li><a href="gallery.html" class="active">Gallery</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <div class="container">
+      <h1>Gallery</h1>
+      <p>Scenes from the gardens, buildings, and community life at Hawthorne Court.</p>
+    </div>
+  </header>
+
+  <!-- Gallery Grid -->
+  <section class="section">
+    <div class="container">
+      <div class="gallery-grid">
+
+        <!--
+          Add your images here. Each item is a <figure> with an image and optional caption.
+          The lightbox will automatically work for any images inside .gallery-grid__item elements.
+
+          To add a new photo, copy this block and update the src, alt, and caption:
+
+          <figure class="gallery-grid__item">
+            <img src="images/your-photo.jpg" alt="Description of photo" data-caption="Caption text">
+            <figcaption>Caption text</figcaption>
+          </figure>
+        -->
+
+        <figure class="gallery-grid__item">
+          <img src="images/garden-spring.jpg" alt="Spring in the Hawthorne Court garden" data-caption="Spring in the garden">
+          <figcaption>Spring in the garden</figcaption>
+        </figure>
+
+        <figure class="gallery-grid__item">
+          <img src="images/hawk.jpg" alt="Red tailed hawk in the garden" data-caption="A juvenile red-tailed hawk surveys the garden">
+          <figcaption>A juvenile red-tailed hawk surveys the garden</figcaption>
+        </figure>
+
+        <figure class="gallery-grid__item">
+          <img src="images/aster.jpg" alt="Aster in bloom" data-caption="Aster in full bloom">
+          <figcaption>Aster in full bloom</figcaption>
+        </figure>
+
+        <figure class="gallery-grid__item">
+          <img src="images/halloween.jpg" alt="Halloween at Hawthorne Court" data-caption="Celebrating Halloween in Hawthorne Court">
+          <figcaption>Celebrating Halloween in Hawthorne Court</figcaption>
+        </figure>
+
+        <figure class="gallery-grid__item">
+          <img src="images/fall-colors.jpg" alt="Fall foliage in the garden" data-caption="Fall colors in the garden">
+          <figcaption>Fall colors in the garden</figcaption>
+        </figure>
+
+        <figure class="gallery-grid__item">
+          <img src="images/growing-up.jpg" alt="Growing up in Hawthorne Court" data-caption="Growing up together in Hawthorne Court">
+          <figcaption>Growing up together in Hawthorne Court</figcaption>
+        </figure>
+
+        <figure class="gallery-grid__item">
+          <img src="images/centennial.jpg" alt="100 year celebration preparations" data-caption="Preparing the garden for the centennial celebration">
+          <figcaption>Preparing the garden for the centennial celebration</figcaption>
+        </figure>
+
+        <figure class="gallery-grid__item">
+          <img src="images/building-exterior.jpg" alt="Hawthorne Court building exterior" data-caption="Hawthorne Court from the street">
+          <figcaption>Hawthorne Court from the street</figcaption>
+        </figure>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox__close" aria-label="Close">&times;</button>
+    <img src="" alt="">
+    <div class="lightbox__caption"></div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Hawthorne Court &middot; Jackson Heights, Queens, NYC</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu
+    const toggle = document.querySelector('.nav__toggle');
+    const links = document.querySelector('.nav__links');
+    toggle.addEventListener('click', () => links.classList.toggle('open'));
+
+    // Lightbox
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+    const lightboxCaption = lightbox.querySelector('.lightbox__caption');
+    const lightboxClose = lightbox.querySelector('.lightbox__close');
+
+    document.querySelectorAll('.gallery-grid__item img').forEach(img => {
+      img.style.cursor = 'pointer';
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightboxCaption.textContent = img.dataset.caption || '';
+        lightbox.classList.add('active');
+      });
+    });
+
+    lightboxClose.addEventListener('click', () => lightbox.classList.remove('active'));
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) lightbox.classList.remove('active');
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') lightbox.classList.remove('active');
+    });
+  </script>
+
+</body>
+</html>

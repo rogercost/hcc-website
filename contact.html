@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Hawthorne Court</title>
+  <meta name="description" content="Get in touch with the Hawthorne Court cooperative in Jackson Heights, Queens.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container">
+      <a href="index.html" class="nav__logo">Hawthorne Court</a>
+      <button class="nav__toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links">
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <div class="container">
+      <h1>Contact</h1>
+      <p>We'd love to hear from you.</p>
+    </div>
+  </header>
+
+  <!-- Contact -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-info">
+        <p>Hawthorne Court is located in the Jackson Heights neighborhood of Queens, New York City, on 76th and 77th Streets between 35th and 37th Avenues.</p>
+        <p>For general inquiries, please use the form below.</p>
+      </div>
+
+      <!--
+        FORM SETUP INSTRUCTIONS:
+        This form uses Formspree (https://formspree.io) to handle submissions
+        without needing a server. To set it up:
+
+        1. Go to https://formspree.io and create a free account
+        2. Create a new form and copy the form ID
+        3. Replace YOUR_FORM_ID below with your actual form ID
+
+        The free tier gives you 50 submissions/month, which is plenty for a
+        community site like this.
+      -->
+      <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Hawthorne Court &middot; Jackson Heights, Queens, NYC</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav__toggle');
+    const links = document.querySelector('.nav__links');
+    toggle.addEventListener('click', () => links.classList.toggle('open'));
+  </script>
+
+</body>
+</html>

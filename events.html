@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events — Hawthorne Court</title>
+  <meta name="description" content="Upcoming events and community gatherings at Hawthorne Court, Jackson Heights.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container">
+      <a href="index.html" class="nav__logo">Hawthorne Court</a>
+      <button class="nav__toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links">
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="events.html" class="active">Events</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <div class="container">
+      <h1>Events</h1>
+      <p>Community gatherings and upcoming events at Hawthorne Court.</p>
+    </div>
+  </header>
+
+  <!-- Events List -->
+  <section class="section">
+    <div class="container">
+      <div class="event-list">
+
+        <!--
+          To add a new event, copy this block and update the date, title, and description:
+
+          <article class="event-item">
+            <div class="event-item__date">Month Day, Year</div>
+            <h3>Event Title</h3>
+            <p>Event description goes here.</p>
+          </article>
+        -->
+
+        <article class="event-item">
+          <div class="event-item__date">Example — Update with your events</div>
+          <h3>Annual Garden Party</h3>
+          <p>Join your neighbors for our annual garden party in the Hawthorne Court courtyard. Refreshments provided. All residents welcome.</p>
+        </article>
+
+        <article class="event-item">
+          <div class="event-item__date">Example</div>
+          <h3>Board Meeting</h3>
+          <p>Monthly cooperative board meeting. Open to all shareholders.</p>
+        </article>
+
+        <article class="event-item">
+          <div class="event-item__date">Example</div>
+          <h3>Garden Volunteer Day</h3>
+          <p>Help maintain our beautiful common garden. Tools and gloves provided. Meet at the south entrance.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Hawthorne Court &middot; Jackson Heights, Queens, NYC</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav__toggle');
+    const links = document.querySelector('.nav__links');
+    toggle.addEventListener('click', () => links.classList.toggle('open'));
+  </script>
+
+</body>
+</html>
