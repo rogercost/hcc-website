@@ -464,6 +464,46 @@ p + p { margin-top: 1.25em; }
   margin: 0;
 }
 
+/* --- Resident Documents --- */
+.resident-docs {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.resident-docs h2 {
+  margin-bottom: 1rem;
+}
+
+.resident-docs > p {
+  color: var(--color-text-light);
+}
+
+.resident-docs__actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+
+.resident-docs__note {
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+}
+
+.btn--outline {
+  background: transparent;
+  color: var(--color-green);
+  border-color: var(--color-green);
+}
+
+.btn--outline:hover {
+  background: var(--color-green);
+  color: var(--color-white);
+}
+
 /* --- About Page Image --- */
 .about-image {
   margin: 3rem 0;
