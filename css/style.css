@@ -421,6 +421,7 @@ p + p { margin-top: 1.25em; }
   gap: 1.5rem;
   max-width: 900px;
   margin: 0 auto;
+  justify-content: center;
 }
 
 .document-card {
